@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    height: 99.9vh;
+    width: 100vw;
+    display: flex;
+    background: url(./imgs/bg.jpg);
+    background-size : cover;
+    background-position: center center;
+    background-repeat : no-repeat;
+
+}
+
+.main {
+    height: 100vh;
+    width: 72vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+}
+
+.controls {
+    height: 100vh;
+    width: 28vw;
+    ;
+}
+
+.box {
+    border: 1px solid black;
+    height: 9.6vh;
+    filter: opacity(0.50);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Satisfy', cursive;
+    font-size: xx-large;
+    text-shadow: 0px 0px 5px rgb(0 0 0);
+}
+
+:is(.snakes, .ladders) {
+    position: absolute;
+    height: 98.6vh;
+    width: 72vw;
+    z-index: 1;
+}
+
+:is(.snakes, .ladders) img {
+    position: absolute;
+}
+
+#s1 {
+    height: 40vh;
+    top: 60%;
+    left: 2%;
+    opacity: 80%;
+}
+
+#s2 {
+    left: 3%;
+    height: 75vh;
+    opacity: 80%;
+}
+
+#s3 {
+    top: 27%;
+    left: 40%;
+    transform: rotateY(180deg);
+    height: 40vh;
+    opacity: 80%;
+}
+
+#s4 {
+    left: 43%;
+    height: 47vh;
+    opacity: 80%;
+}
+
+#s5 {
+    left: 62%;
+    top: 60%;
+    height: 39vh;
+    opacity: 80%;
+}
+
+#s6 {
+    left: 16%;
+    top: 12%;
+    height: 33vh;
+    opacity: 80%;
+}
+
+#l1 {
+    top: 63%;
+    transform: rotateZ(29deg);
+    left: 36%;
+    opacity: 80%;
+}
+
+#l2 {
+    top: 30%;
+    left: 36%;
+    transform: rotateZ(336deg);
+    opacity: 80%;
+}
+
+#l3 {
+    top: 49%;
+    left: 76%;
+    transform: rotateZ(30deg);
+    opacity: 80%;
+}
+
+#l4 {
+    left: 72%;
+    transform: rotateZ(32deg);
+    opacity: 80%;
+}
+
+.players {
+    border: 1px solid black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.users {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: gainsboro;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 20px 20px rgb(0 0 0 / 65%);
+}
+
+.users::before {
+    content: 'Your Turn';
+    position: absolute;
+    z-index: 0;
+    font-size: 5em;
+    color: gainsboro;
+}
+
+.users p::after {
+    content: attr(score);
+}
+
+:is(#u1, #u2) {
+    height: 20vh;
+    z-index: 1;
+}
+
+#bgu1 {
+    background: darkorange;
+}
+
+.users h1 {
+    font-family: 'Architects Daughter', cursive;
+}
+
+.users p {
+    font-family: 'Architects Daughter';
+    font-size: x-large;
+    font-weight: 600;
+}
+
+:is(.res, .alert, .rules) {
+    position: absolute;
+    z-index: 1;
+    background: transparent;
+    backdrop-filter: sepia(0.5) blur(3px) brightness(0.5);
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.wincard {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #00b4db, #0083b0);
+    border-radius: 49px;
+    box-shadow: inset 0px 0px 20px 4px rgb(0 0 0 / 52%);
+}
+
+.wincard img {
+    height: 40vh;
+}
+
+.wincard p {
+    font-family: 'Satisfy';
+    font-size: xxx-large;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: 0px 0px 11px rgb(0 0 0 / 65%);
+}
+
+.albox {
+    height: 20vh;
+    width: 40vw;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Architects Daughter';
+    font-weight: 600;
+    background: white;
+    border-radius: 94px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.albox button {
+    background: #333;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: white;
+    font-family: 'Architects Daughter';
+}
+
+:is(#du1, #du2) {
+    z-index: 1;
+}
+
+.ins {
+    height: 50vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #d66d75, #e29587);
+    border-radius: 45px;
+    box-shadow: inset 0px 0px 20px 4px rgb(0 0 0 / 72%);
+    font-size: x-large;
+    padding: 0 5%;
+}
+
+.ins h1 {
+    font-family: 'Satisfy';
+    color: aliceblue;
+}
+
+.ins li {
+    font-family: 'Architects Daughter';
+}
+
+.ins button {
+    border: none;
+    height: 7vh;
+    width: 9vw;
+    border-radius: 50px;
+    font-family: 'Architects Daughter';
+    font-size: large;
+    font-weight: 600;
+    box-shadow: 0px 0px 11px 1px rgb(0 0 0 / 48%);
+}
+
+.load {
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.controls{
+    opacity: 80%;
+}
